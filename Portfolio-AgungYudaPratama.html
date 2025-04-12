@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuda Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white text-black font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold">AYP</a>
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link px-4 py-2 active">Home</a>
+                    <a href="#about" class="nav-link px-4 py-2">About</a>
+                    <a href="#work" class="nav-link px-4 py-2">Work</a>
+                    <a href="#contact" class="nav-link px-4 py-2">Contact</a>
+                </div>
+
+                <button id="menu-btn" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-4 space-y-1">
+                    <a href="#home" class="block px-3 py-2 hover:bg-gray-100 rounded">Home</a>
+                    <a href="#about" class="block px-3 py-2 hover:bg-gray-100 rounded">About</a>
+                    <a href="#work" class="block px-3 py-2 hover:bg-gray-100 rounded">Work</a>
+                    <a href="#contact" class="block px-3 py-2 hover:bg-gray-100 rounded">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                        Hello, I'm <span class="border-b-4 border-black">Yuda</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-light mb-6">
+                        Web Front End and Android Developer
+                    </h2>
+                    <p class="text-lg mb-8 max-w-lg">
+                        I create elegant digital experiences with a focus on clean design
+                        and seamless functionality.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#work" class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition">View
+                            Work</a>
+                        <a href="#contact"
+                            class="border-2 border-black px-6 py-3 rounded hover:bg-gray-100 transition">Contact Me</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div
+                        class="w-96 h-96 md:w-96 md:h-96 bg-gray-100 rounded-full overflow-hidden border-8 border-gray-200">
+                        <div class="w-full h-full bg-gray-300 flex items-center justify-center">
+                            <img src="./img/agung.png" alt="Me" class="w-full h-full " />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-3xl font-bold mb-16 text-center">
+                About Me
+            </h2>
+
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                    <div class="w-64 h-64 bg-gray-200 rounded-full overflow-hidden border-8 border-white shadow-lg">
+                        <div class="w-full h-full bg-gray-300 flex items-center justify-center">
+                            <img src="./img/agung2.jpg" alt="Me" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-2/3 md:pl-16">
+                    <h3 class="text-2xl font-bold mb-4">My Story</h3>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        As a dedicated Software Engineering student in my final
+                        undergraduate year, I combine cutting-edge technical expertise
+                        with hands-on professional experience gained through
+                        <strong>14 months</strong> of impactful work with
+                        <strong>tech startups</strong>. My specialization spans full-stack
+                        web development using modern frameworks
+                        <strong>(Next.js, Node.js, PrimeReact)</strong> and Android
+                        development with <strong>Android Studio using Kotlin</strong>,
+                        complemented by robust skills in IT infrastructure management and
+                        technical support.
+                    </p>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        I architect enterprise-grade web solutions for corporate clients,
+                        from
+                        <strong>REST API-driven platforms to WordPress ecosystems</strong>
+                        , while maintaining a parallel focus on developing performant
+                        mobile applications. My engineering approach merges academic rigor
+                        with real-world pragmatism, having polished my skills through
+                        Google's selective <strong>Bangkit Academy program with Distinction
+                            Graduate</strong> and sustained collaboration with agile startup teams.
+                    </p>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        Committed to technological excellence, I maintain a dual focus on
+                        code quality and operational reliability, continuously adapting
+                        emerging industry paradigms to deliver solutions that balance
+                        innovation with practical business needs.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="font-bold mb-3">Skills</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <span class="w-2 h-2 bg-black rounded-full mr-2"></span>
+                                    Frontend Development
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="w-2 h-2 bg-black rounded-full mr-2"></span>
+                                    Android Development
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="w-2 h-2 bg-black rounded-full mr-2"></span>
+                                    IT Support
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="w-2 h-2 bg-black rounded-full mr-2"></span>
+                                    Admin
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-3">Tools</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <span class="w-2 h-2 bg-black rounded-full mr-2"></span>
+                                    React JS, Next JS, Node JS
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="w-2 h-2 bg-black rounded-full mr-2"></span>
+                                    Kotlin, Android Studio
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="w-2 h-2 bg-black rounded-full mr-2"></span>
+                                    Troubleshooting, Maintenance
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="w-2 h-2 bg-black rounded-full mr-2"></span>
+                                    Word, Powerpoint, Figma, Canva
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a href="https://drive.google.com/file/d/1aVRf21mv85QiAnZ0TlMRxCQAapwlfs3S/view?usp=sharing"
+                        class="inline-flex items-center border-b border-black pb-1 hover:border-gray-500 transition">
+                        Download Resume <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-3xl font-bold mb-16 text-center">
+                Selected Work
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-5xl text-gray-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mobile App Design</h3>
+                        <p class="text-gray-600 mb-4">
+                            A fitness tracking application with clean interface and
+                            intuitive UX.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">UI Design</span>
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-globe text-5xl text-gray-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Corporate Website</h3>
+                        <p class="text-gray-600 mb-4">
+                            Modern website for a financial services company with responsive
+                            design.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Web Design</span>
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-shopping-bag text-5xl text-gray-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">
+                            Complete redesign of an online store with improved user flows.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">UX Research</span>
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">UI Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-paint-brush text-5xl text-gray-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Brand Identity</h3>
+                        <p class="text-gray-600 mb-4">
+                            Visual identity system for a sustainable fashion startup.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Branding</span>
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Illustration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-5xl text-gray-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Data Visualization</h3>
+                        <p class="text-gray-600 mb-4">
+                            Interactive dashboard for analyzing market trends and metrics.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Data Viz</span>
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Frontend</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-video text-5xl text-gray-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Motion Graphics</h3>
+                        <p class="text-gray-600 mb-4">
+                            Animated explainer video for a tech product launch.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Animation</span>
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Storyboarding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="border-2 border-black px-8 py-3 rounded hover:bg-gray-100 transition">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-3xl font-bold mb-16 text-center">
+                Get In Touch
+            </h2>
+
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-bold mb-6">Let's work together</h3>
+                    <p class="mb-8 text-lg leading-relaxed">
+                        Have a project in mind or want to discuss potential opportunities?
+                        I'm always open to new collaborations and interesting challenges.
+                        Feel free to reach out through the form or directly via email.
+                    </p>
+
+                    <div class="space-y-4">
+                        <a href="mailto:yudaagung70@gmail.com" class="flex items-center hover:text-blue-600 transition">
+                            <i class="fas fa-envelope text-xl mr-4"></i>
+                            <span>yudaagung70@gmail.com</span>
+                        </a>
+                        <a href="tel:+6281380625291" class="flex items-center hover:text-blue-600 transition">
+                            <i class="fas fa-phone text-xl mr-4"></i>
+                            <span>+6281380625291</span>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Bandung,+East+Java,+Indonesia"
+                            target="_blank" class="flex items-center hover:text-blue-600 transition">
+                            <i class="fas fa-map-marker-alt text-xl mr-4"></i>
+                            <span>Bandung, East Java, Indonesia</span>
+                        </a>
+                    </div>
+
+
+                    <div class="flex space-x-4 mt-8">
+                        <a href="https://www.linkedin.com/in/agung-yuda-pratama-4b1866250/" target="_blank"
+                            class="w-10 h-10 rounded-full border border-black flex items-center justify-center hover:bg-gray-100 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Yuda531" target="_blank"
+                            class="w-10 h-10 rounded-full border border-black flex items-center justify-center hover:bg-gray-100 transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/yudaagung531/" target="_blank"
+                            class="w-10 h-10 rounded-full border border-black flex items-center justify-center hover:bg-gray-100 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium">Name</label>
+                            <input type="text" id="name"
+                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-black" />
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">Email</label>
+                            <input type="email" id="email"
+                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-black" />
+                        </div>
+                        <div>
+                            <label for="subject" class="block mb-2 font-medium">Subject</label>
+                            <input type="text" id="subject"
+                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-black" />
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="5"
+                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-black"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition w-full md:w-auto">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold">Agung Yuda Pratama</a>
+                    <p class="mt-2 text-gray-400">©2025 All rights reserved</p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-gray-400 transition">Home</a>
+                    <a href="#" class="hover:text-gray-400 transition">About</a>
+                    <a href="#" class="hover:text-gray-400 transition">Work</a>
+                    <a href="#" class="hover:text-gray-400 transition">Contact</a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-400">
+                <p>Designed and developed by Agung Yuda Pratama</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-black text-white rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        // Fungsi update active state
+        function updateActiveState() {
+            const scrollPos = window.scrollY;
+
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                    const id = section.getAttribute('id');
+
+                    navLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                    });
+
+                }
+            });
+        }
+
+        // Event listeners
+        window.addEventListener('scroll', () => {
+            updateActiveState();
+            requestAnimationFrame(updateActiveState);
+        });
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("open");
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+
+                mobileMenu.classList.remove("open");
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+                // Update active state setelah scroll
+                setTimeout(updateActiveState, 1000);
+            });
+        });
+
+        // Inisialisasi active state
+        updateActiveState();
+    </script>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("open");
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                mobileMenu.classList.remove("open");
+
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth",
+                });
+            });
+        });
+
+        // Back to top button
+        const backToTopBtn = document.getElementById("back-to-top");
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove("opacity-0", "invisible");
+                backToTopBtn.classList.add("opacity-100", "visible");
+            } else {
+                backToTopBtn.classList.remove("opacity-100", "visible");
+                backToTopBtn.classList.add("opacity-0", "invisible");
+            }
+        });
+
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        });
+
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll(
+                ".project-card, .section-title"
+            );
+
+            elements.forEach((element) => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+
+                if (elementPosition < screenPosition) {
+                    element.classList.add("animate-fadeIn");
+                }
+            });
+        };
+
+        window.addEventListener("scroll", animateOnScroll);
+        window.addEventListener("load", animateOnScroll);
+    </script>
+</body>
+
+</html>
