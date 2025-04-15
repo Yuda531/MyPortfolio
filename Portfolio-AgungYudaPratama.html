@@ -191,60 +191,66 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+                    onclick="openModal('project1')">
                     <div class="h-48 bg-gray-200 flex items-center justify-center project-image">
-                        <i class="fas fa-mobile-alt text-5xl text-gray-500"></i>
+                        <img src="img/projects/Project1_1.png" alt="Thriftify App">
                     </div>
                     <div class="p-6 project-content">
-                        <h3 class="text-xl font-bold mb-2">Mobile App Design</h3>
+                        <h3 class="text-xl font-bold mb-2">Thriftify App</h3>
                         <p class="text-gray-600 mb-4">
-                            A fitness tracking application with clean interface and
-                            intuitive UX.
+                            E-Commerce Platform For Buying And Selling Second-Hand Clothing
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">UI Design</span>
-                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Prototyping</span>
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Kotlin</span>
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Retrofit</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+                    onclick="openModal('project2')">
                     <div class="h-48 bg-gray-200 flex items-center justify-center project-image">
-                        <i class="fas fa-globe text-5xl text-gray-500"></i>
+                        <img src="img/projects/Project2_1.png" alt="Story App">
                     </div>
                     <div class="p-6 project-content">
-                        <h3 class="text-xl font-bold mb-2">Corporate Website</h3>
+                        <h3 class="text-xl font-bold mb-2">Story App</h3>
                         <p class="text-gray-600 mb-4">
-                            Modern website for a financial services company with responsive
-                            design.
+                            A project for Android Intermediate Class Submission Dicoding
+                            An App for share story (image & description) also with maps feature
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Web Design</span>
-                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Development</span>
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Android Studio</span>
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Kotlin</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+                    onclick="openModal('project3')">
                     <div class="h-48 bg-gray-200 flex items-center justify-center project-image">
-                        <i class="fas fa-shopping-bag text-5xl text-gray-500"></i>
+                        <img src="img/projects/Project3_1.png" alt="Asclepius">
                     </div>
                     <div class="p-6 project-content">
-                        <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                        <h3 class="text-xl font-bold mb-2">Asclepius - Cancer Detection App</h3>
                         <p class="text-gray-600 mb-4">
-                            Complete redesign of an online store with improved user flows.
+                            A Machine Learning-Powered Android Application for Skin Cancer Classification
+                            <br><small>There
+                                is cancer skin image that may cause uncomfortable</small>
                         </p>
+
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">UX Research</span>
-                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">UI Design</span>
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Kotlin</span>
+                            <span class="bg-gray-100 px-3 py-1 text-sm rounded">Tensorflow Lite</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 4 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+                    onclick="openModal('project4')">
                     <div class="h-48 bg-gray-200 flex items-center justify-center project-image">
                         <i class="fas fa-paint-brush text-5xl text-gray-500"></i>
                     </div>
@@ -261,7 +267,8 @@
                 </div>
 
                 <!-- Project 5 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+                    onclick="openModal('project5')">
                     <div class="h-48 bg-gray-200 flex items-center justify-center project-image">
                         <i class="fas fa-chart-line text-5xl text-gray-500"></i>
                     </div>
@@ -278,7 +285,8 @@
                 </div>
 
                 <!-- Project 6 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md cursor-pointer"
+                    onclick="openModal('project6')">
                     <div class="h-48 bg-gray-200 flex items-center justify-center project-image">
                         <i class="fas fa-video text-5xl text-gray-500"></i>
                     </div>
@@ -302,6 +310,18 @@
             </div>
         </div>
     </section>
+
+    <!-- Project Modals -->
+    <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="modal-content bg-white rounded-lg max-w-4xl mx-auto my-20 p-8 relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-gray-50">
@@ -654,7 +674,6 @@
                 formSuccess.classList.remove('hidden');
                 contactForm.reset();
 
-                // Reset form after 3 seconds
                 setTimeout(() => {
                     formSuccess.classList.add('hidden');
                     submitBtn.disabled = false;
@@ -662,11 +681,278 @@
                     submitSpinner.classList.add('hidden');
                 }, 3000);
             } catch (error) {
-                // Handle error
                 submitBtn.disabled = false;
                 submitText.textContent = 'Send Message';
                 submitSpinner.classList.add('hidden');
                 alert('An error occurred. Please try again later.');
+            }
+        });
+    </script>
+
+    <script>
+        // Project Modal Functionality
+        const modal = document.getElementById('projectModal');
+        const modalBody = document.querySelector('.modal-body');
+
+        const projectDetails = {
+            project1: {
+                title: 'Thriftify App',
+                description: 'Thriftify is an innovative e-commerce platform for buying and selling second-hand clothing. Powered by machine learning for seamless categorization and personalized recommendations, it offers a user-friendly experience while promoting sustainable fashion and reducing fast fashion waste. Targeting eco-conscious 18-35-year-olds (Gen Z to Millennials).',
+                technologies: ['Android Studio', 'Kotlin', 'Retrofit', 'Tensorflow', 'Room', 'Google Cloud'],
+                features: [
+                    'Real-Time Data Updates',
+                    'Social Sharing Features And Chat Seller Directly',
+                    'Monetizing Unused Clothes',
+                    'User-Friendly Experience'
+                ],
+                githubLink: 'https://github.com/C242-PS121',
+                images: [
+                    'img/projects/Project1_1.png',
+                    'img/projects/Project1_2.png',
+                    'img/projects/Project1_3.png',
+                    'img/projects/Project1_4.png',
+                    'img/projects/Project1_5.png',
+                    'img/projects/Project1_6.png',
+                    'img/projects/Project1_7.png',
+                    'img/projects/Project1_8.png',
+                    'img/projects/Project1_9.png',
+                ]
+            },
+            project2: {
+                title: 'Story App',
+                description: 'Story App is a user-friendly mobile application designed to allow users to share their stories through images and descriptions while incorporating advanced features such as maps integration, animations, and paging. This project was developed as part of the Android Intermediate Class submission for Dicoding, showcasing a robust implementation of modern Android development practices.',
+                technologies: ['Android Studio', 'Kotlin', 'Retrofit', 'Coroutines'],
+                features: [
+                    'Responsive Design For All Devices',
+                    'Provides A Secure And Seamless Authentication',
+                    'Browse And Interact With Shared Stories',
+                    'Maps and Paging Integration'
+                ],
+                githubLink: 'https://github.com/Yuda531/StoryApp',
+                images: [
+                    'img/projects/Project2_1.png',
+                    'img/projects/Project2_2.png',
+                    'img/projects/Project2_3.png',
+                    'img/projects/Project2_4.png',
+                    'img/projects/Project2_5.png',
+                    'img/projects/Project2_6.png',
+                ]
+            },
+            project3: {
+                title: 'Asclepius - Cancer Detection App',
+                description: 'The Cancer Detection App is an Android application designed to detect and classify skin cancer using machine learning. Built as part of a bootcamp project by Team Asclepius, the app leverages TensorFlow Lite to process images and classify them into two categories: cancer or non-cancer . The app aims to address real-world health challenges by providing users with a simple and accessible tool to identify potential skin cancer risks. Inspired by the Greek god of healing, Asclepius, this project combines Android development expertise with advanced machine learning models to deliver a practical solution for early detection of skin cancer.',
+                technologies: ['Android Studio', 'Kotlin', 'Tensor Flow', 'Camera X'],
+                features: [
+                    'Image Capture and Preview',
+                    'Machine Learning-Powered Prediction',
+                    'Confidence Score Display',
+                    'Model Integration'
+                ],
+                githubLink: 'https://github.com/Yuda531/Asclepius---Cancer-Detection-App',
+                images: [
+                    'img/projects/Project3_1.png',
+                    'img/projects/Project3_2.png',
+                    'img/projects/Project3_3.png'
+                ]
+            },
+            project4: {
+                title: 'Brand Identity',
+                description: 'A comprehensive brand identity system for a sustainable fashion startup, including logo design, color palette, typography, and brand guidelines.',
+                technologies: ['Adobe Illustrator', 'Photoshop', 'InDesign'],
+                features: [
+                    'Logo design and variations',
+                    'Brand color system',
+                    'Typography guidelines',
+                    'Brand application examples'
+                ],
+                githubLink: '#',
+                images: [
+                    'img/agung4.jpg',
+                    'img/agung.png',
+                    'img/agung2.jpg',
+                    'img/agung3.jpg'
+                ]
+            },
+            project5: {
+                title: 'Data Visualization',
+                description: 'An interactive dashboard for analyzing market trends and business metrics. The project focused on making complex data easily understandable through intuitive visualizations.',
+                technologies: ['D3.js', 'React', 'Python', 'MongoDB'],
+                features: [
+                    'Interactive charts and graphs',
+                    'Real-time data updates',
+                    'Customizable dashboards',
+                    'Export and sharing capabilities'
+                ],
+                githubLink: '#',
+                images: [
+                    'img/agung.png',
+                    'img/agung2.jpg',
+                    'img/agung3.jpg',
+                    'img/agung4.jpg'
+                ]
+            },
+            project6: {
+                title: 'Motion Graphics',
+                description: 'An animated explainer video for a tech product launch, combining 2D animation with motion graphics to create an engaging product presentation.',
+                technologies: ['After Effects', 'Illustrator', 'Premiere Pro'],
+                features: [
+                    '2D character animation',
+                    'Motion graphics',
+                    'Sound design',
+                    'Multi-platform optimization'
+                ],
+                githubLink: '#',
+                images: [
+                    'img/agung4.jpg',
+                    'img/agung.png',
+                    'img/agung2.jpg',
+                    'img/agung3.jpg'
+                ]
+            }
+        };
+
+        let currentSlide = 0;
+        let slideInterval;
+
+        function updateCarousel() {
+            const slides = document.querySelector('.carousel-slides');
+            const dots = document.querySelectorAll('.carousel-dot');
+
+            if (slides) {
+                slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+        }
+
+        function nextSlide() {
+            const totalSlides = document.querySelectorAll('.carousel-slide').length;
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            const totalSlides = document.querySelectorAll('.carousel-slide').length;
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        function startSlideInterval() {
+            stopSlideInterval();
+            slideInterval = setInterval(nextSlide, 2000);
+        }
+
+        function stopSlideInterval() {
+            if (slideInterval) {
+                clearInterval(slideInterval);
+            }
+        }
+
+        function openModal(projectId) {
+            const project = projectDetails[projectId];
+            modalBody.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="carousel-container">
+                        <div class="carousel-slides">
+                            ${project.images.map((image, index) => `
+                                <div class="carousel-slide" data-index="${index}">
+                                    <img src="${image}" alt="${project.title} - Image ${index + 1}">
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="carousel-nav">
+                            <button class="carousel-button prev" onclick="prevSlide()">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="carousel-button next" onclick="nextSlide()">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="carousel-dots">
+                            ${project.images.map((_, index) => `
+                                <div class="carousel-dot ${index === 0 ? 'active' : ''}" 
+                                     onclick="goToSlide(${index})"></div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="text-3xl font-bold mb-4">${project.title}</h3>
+                        <p class="text-gray-600 mb-6">${project.description}</p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">Technologies Used:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                ${project.technologies.map(tech => `
+                                    <span class="bg-gray-100 px-3 py-1 text-sm rounded">${tech}</span>
+                                `).join('')}
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="font-bold mb-2">Key Features:</h4>
+                            <ul class="list-disc list-inside space-y-2">
+                                ${project.features.map(feature => `
+                                    <li class="text-gray-600">${feature}</li>
+                                `).join('')}
+                            </ul>
+                        </div>
+
+                        <div class="mt-6">
+                            <a href="${project.githubLink}" target="_blank" 
+                               class="inline-flex items-center bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">
+                                <i class="fab fa-github mr-2"></i>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            currentSlide = 0;
+            updateCarousel();
+            startSlideInterval();
+
+            const prevButton = document.querySelector('.carousel-button.prev');
+            const nextButton = document.querySelector('.carousel-button.next');
+            const dots = document.querySelectorAll('.carousel-dot');
+
+            if (prevButton) {
+                prevButton.addEventListener('mouseenter', stopSlideInterval);
+                prevButton.addEventListener('mouseleave', startSlideInterval);
+            }
+
+            if (nextButton) {
+                nextButton.addEventListener('mouseenter', stopSlideInterval);
+                nextButton.addEventListener('mouseleave', startSlideInterval);
+            }
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => goToSlide(index));
+            });
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            stopSlideInterval();
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
             }
         });
     </script>
