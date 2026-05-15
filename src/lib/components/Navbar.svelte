@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+    import { getLenis } from '$lib/lenis';
 
     let isMobileMenuOpen = $state(false);
     let activeSection = $state('home');
@@ -12,9 +12,14 @@
         e.preventDefault();
         isMobileMenuOpen = false;
         
-        const target = document.getElementById(id);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const lenis = getLenis();
+        if (lenis) {
+            lenis.scrollTo(`#${id}`);
+        } else {
+            const target = document.getElementById(id);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
     }
 

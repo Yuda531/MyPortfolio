@@ -1,9 +1,23 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
     import gsap from 'gsap';
+    import { getLenis } from '$lib/lenis';
 
     let heroContainer: HTMLElement;
     let imageContainer: HTMLElement;
+
+    function scrollToSection(e: Event, id: string) {
+        e.preventDefault();
+        
+        const lenis = getLenis();
+        if (lenis) {
+            lenis.scrollTo(`#${id}`);
+        } else {
+            const target = document.getElementById(id);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    }
 
     $effect(() => {
         // Simple entry animation using GSAP
@@ -36,10 +50,10 @@
                     and seamless functionality.
                 </p>
                 <div class="hero-text flex space-x-4">
-                    <a href="#work" class="bg-ink-button text-on-ink-button px-8 py-3 rounded-full hover:bg-charcoal transition-colors font-bold text-sm">
+                    <a href="#work" onclick={(e) => scrollToSection(e, 'work')} class="bg-ink-button text-on-ink-button px-8 py-3 rounded-full hover:bg-charcoal transition-colors font-bold text-sm">
                         View Work
                     </a>
-                    <a href="#contact" class="bg-transparent text-ink-deep border-2 border-ink-deep px-8 py-3 rounded-full hover:bg-surface-soft transition-colors font-bold text-sm">
+                    <a href="#contact" onclick={(e) => scrollToSection(e, 'contact')} class="bg-transparent text-ink-deep border-2 border-ink-deep px-8 py-3 rounded-full hover:bg-surface-soft transition-colors font-bold text-sm">
                         Contact Me
                     </a>
                 </div>
