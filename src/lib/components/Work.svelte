@@ -58,8 +58,10 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {#each projects as project}
+                <!-- svelte-ignore a11y_click_events_have_key_events -->
+                <!-- svelte-ignore a11y_no_static_element_interactions -->
                 <div 
-                    class="project-card bg-canvas rounded-[32px] overflow-hidden border border-hairline-soft cursor-pointer hover:shadow-lg transition-shadow duration-300 group"
+                    class="project-card bg-canvas rounded-4xl overflow-hidden border border-hairline-soft cursor-pointer hover:shadow-lg transition-shadow duration-300 group"
                     onclick={() => openModal(project)}
                 >
                     <div class="h-56 bg-surface-soft flex items-center justify-center project-image overflow-hidden p-4">

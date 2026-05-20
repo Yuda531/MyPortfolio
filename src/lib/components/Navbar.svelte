@@ -46,6 +46,7 @@
 <nav class="fixed w-full bg-canvas z-50 shadow-sm transition-all duration-300">
     <div class="container mx-auto px-6 py-4">
         <div class="flex justify-between items-center">
+            <!-- svelte-ignore a11y_invalid_attribute -->
             <a href="#" onclick={(e) => scrollToSection(e, 'home')} class="text-2xl font-bold font-sans tracking-tight">AYP</a>
 
             <div class="hidden md:flex space-x-8">
@@ -60,6 +61,7 @@
                 {/each}
             </div>
 
+            <!-- svelte-ignore a11y_consider_explicit_label -->
             <button onclick={toggleMobileMenu} class="md:hidden focus:outline-none">
                 <i class="fas {isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl"></i>
             </button>

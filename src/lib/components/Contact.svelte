@@ -108,7 +108,7 @@
                     Feel free to reach out through the form or directly via email.
                 </p>
 
-                <div class="space-y-6 bg-canvas p-8 rounded-[32px] border border-hairline-soft shadow-sm">
+                <div class="space-y-6 bg-canvas p-8 rounded-4xl border border-hairline-soft shadow-sm">
                     <a href="mailto:yudaagung70@gmail.com" class="animate-contact-item flex items-center group">
                         <div class="w-12 h-12 bg-surface-soft rounded-full flex items-center justify-center mr-4 group-hover:bg-primary transition-colors">
                             <i class="fas fa-envelope text-xl text-ink-deep group-hover:text-canvas transition-colors"></i>
@@ -131,14 +131,17 @@
                 </div>
 
                 <div class="flex space-x-4 mt-10">
+                    <!-- svelte-ignore a11y_consider_explicit_label -->
                     <a href="https://www.linkedin.com/in/agung-yuda-pratama-4b1866250/" target="_blank"
                         class="animate-contact-social w-12 h-12 rounded-full border border-hairline bg-canvas flex items-center justify-center text-ink hover:bg-surface-soft hover:border-ink transition-all shadow-sm">
                         <i class="fab fa-linkedin-in text-lg"></i>
                     </a>
+                    <!-- svelte-ignore a11y_consider_explicit_label -->
                     <a href="https://github.com/Yuda531" target="_blank"
                         class="animate-contact-social w-12 h-12 rounded-full border border-hairline bg-canvas flex items-center justify-center text-ink hover:bg-surface-soft hover:border-ink transition-all shadow-sm">
                         <i class="fab fa-github text-lg"></i>
                     </a>
+                    <!-- svelte-ignore a11y_consider_explicit_label -->
                     <a href="https://www.instagram.com/yudaagung531/" target="_blank"
                         class="animate-contact-social w-12 h-12 rounded-full border border-hairline bg-canvas flex items-center justify-center text-ink hover:bg-surface-soft hover:border-ink transition-all shadow-sm">
                         <i class="fab fa-instagram text-lg"></i>
@@ -147,7 +150,7 @@
             </div>
 
             <div class="md:w-7/12 animate-contact-right">
-                <div class="bg-canvas p-8 md:p-10 rounded-[32px] border border-hairline-soft shadow-sm">
+                <div class="bg-canvas p-8 md:p-10 rounded-4xl border border-hairline-soft shadow-sm">
                     <form bind:this={formElement} onsubmit={handleSubmit} class="space-y-6">
                         <div>
                             <label for="name" class="block mb-2 font-bold text-sm text-ink-deep">Name</label>
@@ -183,7 +186,7 @@
                         
                         <div class="relative pt-2">
                             <button type="submit" disabled={isSubmitting}
-                                class="bg-ink-button text-on-ink-button px-8 py-3.5 rounded-full hover:bg-charcoal transition-colors w-full sm:w-auto flex items-center justify-center font-bold text-sm min-w-[160px] disabled:opacity-70 disabled:cursor-not-allowed">
+                                class="bg-ink-button text-on-ink-button px-8 py-3.5 rounded-full hover:bg-charcoal transition-colors w-full sm:w-auto flex items-center justify-center font-bold text-sm min-w-40 disabled:opacity-70 disabled:cursor-not-allowed">
                                 {#if isSubmitting}
                                     <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>

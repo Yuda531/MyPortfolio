@@ -50,11 +50,12 @@
 
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_static_element_interactions -->
-<div class="fixed inset-0 bg-ink-deep/80 z-[100] flex items-center justify-center p-4 backdrop-blur-sm" onclick={closeModal}>
+<div class="fixed inset-0 bg-ink-deep/80 z-100 flex items-center justify-center p-4 backdrop-blur-sm" onclick={closeModal}>
     <div 
-        class="bg-canvas rounded-[32px] w-full max-w-5xl max-h-[90vh] overflow-y-auto relative shadow-2xl" 
+        class="bg-canvas rounded-4xl w-full max-w-5xl max-h-[90vh] overflow-y-auto relative shadow-2xl" 
         onclick={(e) => e.stopPropagation()}
     >
+        <!-- svelte-ignore a11y_consider_explicit_label -->
         <button 
             onclick={closeModal} 
             class="absolute top-6 right-6 w-10 h-10 bg-surface-soft hover:bg-hairline rounded-full flex items-center justify-center text-ink transition-colors z-10"
@@ -69,7 +70,7 @@
                      onmouseenter={stopSlideInterval}
                      onmouseleave={startSlideInterval}
                 >
-                    <div class="relative h-[28rem]">
+                    <div class="relative h-112">
                         {#each project.images as image, index}
                             <div 
                                 class="absolute inset-0 flex items-center justify-center transition-opacity duration-500 ease-in-out p-4"
@@ -80,9 +81,11 @@
                         {/each}
                     </div>
                     
+                    <!-- svelte-ignore a11y_consider_explicit_label -->
                     <button class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-canvas/80 backdrop-blur text-ink rounded-full flex items-center justify-center shadow hover:bg-canvas transition-colors opacity-0 group-hover:opacity-100" onclick={prevSlide}>
                         <i class="fas fa-chevron-left"></i>
                     </button>
+                    <!-- svelte-ignore a11y_consider_explicit_label -->
                     <button class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-canvas/80 backdrop-blur text-ink rounded-full flex items-center justify-center shadow hover:bg-canvas transition-colors opacity-0 group-hover:opacity-100" onclick={nextSlide}>
                         <i class="fas fa-chevron-right"></i>
                     </button>

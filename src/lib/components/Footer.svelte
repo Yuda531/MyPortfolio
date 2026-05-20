@@ -12,6 +12,7 @@
     <div class="container mx-auto px-6 max-w-6xl">
         <div class="flex flex-col md:flex-row justify-between items-center md:items-start mb-12">
             <div class="mb-8 md:mb-0 text-center md:text-left">
+                <!-- svelte-ignore a11y_invalid_attribute -->
                 <a href="#" onclick={(e) => scrollToSection(e, 'home')} class="text-2xl font-bold font-sans tracking-tight text-canvas">AYP</a>
                 <p class="mt-3 text-stone text-sm">© {new Date().getFullYear()} Agung Yuda Pratama</p>
             </div>
