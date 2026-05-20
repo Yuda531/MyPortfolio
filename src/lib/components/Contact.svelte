@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
     import gsap from 'gsap';
 
     let section: HTMLElement;
@@ -23,19 +22,41 @@
     });
 
     $effect(() => {
-        gsap.fromTo(section.querySelectorAll('.animate-contact'),
-            { y: 50, opacity: 0 },
-            {
-                y: 0,
-                opacity: 1,
-                duration: 0.6,
-                stagger: 0.1,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top 80%",
-                }
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "top 75%",
             }
+        });
+
+        // Heading clips in from below with scale
+        tl.fromTo(section.querySelector('.animate-contact-heading'),
+            { y: 60, opacity: 0, scale: 0.9 },
+            { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.3)" }
+        )
+        // Left column slides in from the left
+        .fromTo(section.querySelector('.animate-contact-left'),
+            { x: -100, opacity: 0 },
+            { x: 0, opacity: 1, duration: 0.9, ease: "power3.out" },
+            "-=0.4"
+        )
+        // Right column slides in from the right
+        .fromTo(section.querySelector('.animate-contact-right'),
+            { x: 100, opacity: 0 },
+            { x: 0, opacity: 1, duration: 0.9, ease: "power3.out" },
+            "-=0.7"
+        )
+        // Contact info items stagger in
+        .fromTo(section.querySelectorAll('.animate-contact-item'),
+            { y: 30, opacity: 0, scale: 0.95 },
+            { y: 0, opacity: 1, scale: 1, duration: 0.5, stagger: 0.1, ease: "power2.out" },
+            "-=0.4"
+        )
+        // Social links pop in
+        .fromTo(section.querySelectorAll('.animate-contact-social'),
+            { scale: 0, opacity: 0 },
+            { scale: 1, opacity: 1, duration: 0.4, stagger: 0.08, ease: "back.out(2)" },
+            "-=0.2"
         );
     });
 
@@ -74,12 +95,12 @@
 
 <section id="contact" class="py-20 bg-surface-soft" bind:this={section}>
     <div class="container mx-auto px-6 max-w-6xl">
-        <h2 class="animate-contact text-3xl md:text-4xl font-bold mb-16 text-center text-ink-deep font-sans">
+        <h2 class="animate-contact-heading text-3xl md:text-4xl font-bold mb-16 text-center text-ink-deep font-sans">
             Get In Touch
         </h2>
 
         <div class="flex flex-col md:flex-row gap-12 lg:gap-20">
-            <div class="md:w-5/12 animate-contact">
+            <div class="md:w-5/12 animate-contact-left">
                 <h3 class="text-3xl font-bold mb-6 text-ink-deep font-sans">Let's work together</h3>
                 <p class="mb-10 text-lg text-charcoal leading-relaxed">
                     Have a project in mind or want to discuss potential opportunities?
@@ -88,20 +109,20 @@
                 </p>
 
                 <div class="space-y-6 bg-canvas p-8 rounded-[32px] border border-hairline-soft shadow-sm">
-                    <a href="mailto:yudaagung70@gmail.com" class="flex items-center group">
+                    <a href="mailto:yudaagung70@gmail.com" class="animate-contact-item flex items-center group">
                         <div class="w-12 h-12 bg-surface-soft rounded-full flex items-center justify-center mr-4 group-hover:bg-primary transition-colors">
                             <i class="fas fa-envelope text-xl text-ink-deep group-hover:text-canvas transition-colors"></i>
                         </div>
                         <span class="text-ink group-hover:text-primary transition-colors font-medium">yudaagung70@gmail.com</span>
                     </a>
-                    <a href="tel:+6281380625291" class="flex items-center group">
+                    <a href="tel:+6281380625291" class="animate-contact-item flex items-center group">
                         <div class="w-12 h-12 bg-surface-soft rounded-full flex items-center justify-center mr-4 group-hover:bg-primary transition-colors">
                             <i class="fas fa-phone text-xl text-ink-deep group-hover:text-canvas transition-colors"></i>
                         </div>
                         <span class="text-ink group-hover:text-primary transition-colors font-medium">+6281380625291</span>
                     </a>
                     <a href="https://www.google.com/maps/search/?api=1&query=Bandung,+East+Java,+Indonesia"
-                        target="_blank" class="flex items-center group">
+                        target="_blank" class="animate-contact-item flex items-center group">
                         <div class="w-12 h-12 bg-surface-soft rounded-full flex items-center justify-center mr-4 group-hover:bg-primary transition-colors">
                             <i class="fas fa-map-marker-alt text-xl text-ink-deep group-hover:text-canvas transition-colors"></i>
                         </div>
@@ -111,21 +132,21 @@
 
                 <div class="flex space-x-4 mt-10">
                     <a href="https://www.linkedin.com/in/agung-yuda-pratama-4b1866250/" target="_blank"
-                        class="w-12 h-12 rounded-full border border-hairline bg-canvas flex items-center justify-center text-ink hover:bg-surface-soft hover:border-ink transition-all shadow-sm">
+                        class="animate-contact-social w-12 h-12 rounded-full border border-hairline bg-canvas flex items-center justify-center text-ink hover:bg-surface-soft hover:border-ink transition-all shadow-sm">
                         <i class="fab fa-linkedin-in text-lg"></i>
                     </a>
                     <a href="https://github.com/Yuda531" target="_blank"
-                        class="w-12 h-12 rounded-full border border-hairline bg-canvas flex items-center justify-center text-ink hover:bg-surface-soft hover:border-ink transition-all shadow-sm">
+                        class="animate-contact-social w-12 h-12 rounded-full border border-hairline bg-canvas flex items-center justify-center text-ink hover:bg-surface-soft hover:border-ink transition-all shadow-sm">
                         <i class="fab fa-github text-lg"></i>
                     </a>
                     <a href="https://www.instagram.com/yudaagung531/" target="_blank"
-                        class="w-12 h-12 rounded-full border border-hairline bg-canvas flex items-center justify-center text-ink hover:bg-surface-soft hover:border-ink transition-all shadow-sm">
+                        class="animate-contact-social w-12 h-12 rounded-full border border-hairline bg-canvas flex items-center justify-center text-ink hover:bg-surface-soft hover:border-ink transition-all shadow-sm">
                         <i class="fab fa-instagram text-lg"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="md:w-7/12 animate-contact">
+            <div class="md:w-7/12 animate-contact-right">
                 <div class="bg-canvas p-8 md:p-10 rounded-[32px] border border-hairline-soft shadow-sm">
                     <form bind:this={formElement} onsubmit={handleSubmit} class="space-y-6">
                         <div>

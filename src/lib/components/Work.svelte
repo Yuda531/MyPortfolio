@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
     import gsap from 'gsap';
     import { projects, type Project } from '$lib/data/projects';
     import ProjectModal from './ProjectModal.svelte';
@@ -8,19 +7,37 @@
     let selectedProject: Project | null = $state(null);
 
     $effect(() => {
-        gsap.fromTo(section.querySelectorAll('.project-card'),
-            { y: 50, opacity: 0 },
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "top 75%",
+            }
+        });
+
+        // Heading scales in with a subtle bounce
+        tl.fromTo(section.querySelector('.animate-work-heading'),
+            { scale: 0.8, opacity: 0, y: 30 },
+            { scale: 1, opacity: 1, y: 0, duration: 0.8, ease: "back.out(1.5)" }
+        )
+        // Cards fly in from bottom with staggered rotation
+        .fromTo(section.querySelectorAll('.project-card'),
+            { y: 100, opacity: 0, scale: 0.9, rotateX: 15 },
             {
                 y: 0,
                 opacity: 1,
-                duration: 0.6,
-                stagger: 0.1,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top 80%",
-                }
-            }
+                scale: 1,
+                rotateX: 0,
+                duration: 0.7,
+                stagger: { amount: 0.8, from: "start" },
+                ease: "power3.out"
+            },
+            "-=0.4"
+        )
+        // CTA button slides up
+        .fromTo(section.querySelector('.animate-work-cta'),
+            { y: 40, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
+            "-=0.3"
         );
     });
 
@@ -35,7 +52,7 @@
 
 <section id="work" class="py-20 bg-canvas" bind:this={section}>
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center text-ink-deep">
+        <h2 class="animate-work-heading text-3xl md:text-4xl font-bold mb-16 text-center text-ink-deep">
             Selected Work
         </h2>
 
@@ -74,7 +91,7 @@
             {/each}
         </div>
 
-        <div class="text-center mt-16">
+        <div class="animate-work-cta text-center mt-16">
             <a href="https://github.com/Yuda531?tab=repositories"
                 class="inline-flex items-center border-2 border-ink-deep text-ink-deep px-8 py-3 rounded-full hover:bg-surface-soft transition-colors font-bold text-sm" 
                 target="_blank">

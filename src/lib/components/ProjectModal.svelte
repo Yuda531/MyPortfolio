@@ -69,10 +69,10 @@
                      onmouseenter={stopSlideInterval}
                      onmouseleave={startSlideInterval}
                 >
-                    <div class="aspect-video relative">
+                    <div class="relative h-[28rem]">
                         {#each project.images as image, index}
                             <div 
-                                class="absolute inset-0 transition-opacity duration-500 ease-in-out flex items-center justify-center p-4"
+                                class="absolute inset-0 flex items-center justify-center transition-opacity duration-500 ease-in-out p-4"
                                 style="opacity: {currentSlide === index ? 1 : 0}; pointer-events: {currentSlide === index ? 'auto' : 'none'};"
                             >
                                 <img src={image} alt="{project.title} - Image {index + 1}" class="max-w-full max-h-full object-contain drop-shadow-md rounded-lg">

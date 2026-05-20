@@ -20,18 +20,29 @@
     }
 
     $effect(() => {
-        // Simple entry animation using GSAP
-        const tl = gsap.timeline();
-        
-        tl.fromTo(heroContainer.querySelectorAll('.hero-text'), 
-            { y: 50, opacity: 0 }, 
-            { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power3.out" }
+        const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
+        // Heading clips in from below
+        tl.fromTo(heroContainer.querySelectorAll('.hero-text'),
+            { y: 80, opacity: 0, skewY: 4 },
+            { y: 0, opacity: 1, skewY: 0, duration: 1, stagger: 0.15 }
         )
-        .fromTo(imageContainer, 
-            { scale: 0.8, opacity: 0 }, 
-            { scale: 1, opacity: 1, duration: 0.8, ease: "power3.out" }, 
-            "-=0.6"
+        // Image rotates and scales in with a bounce
+        .fromTo(imageContainer,
+            { scale: 0, rotate: -15, opacity: 0 },
+            { scale: 1, rotate: 0, opacity: 1, duration: 1.2, ease: "elastic.out(1, 0.6)" },
+            "-=0.8"
         );
+
+        // Continuous floating animation on the image
+        gsap.to(imageContainer, {
+            y: -12,
+            duration: 2.5,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: 1.5
+        });
     });
 </script>
 
