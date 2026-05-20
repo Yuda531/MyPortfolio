@@ -1,9 +1,12 @@
 <script lang="ts">
     import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
     let section: HTMLElement;
 
     $effect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
@@ -97,17 +100,17 @@
                         <h4 class="font-bold mb-4 text-lg text-ink-deep border-b border-hairline pb-2">Tools</h4>
                         <ul class="space-y-3 text-sm text-charcoal">
                             <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Kotlin, JavaScript, TypeScript, Java, SQL</span></li>
-                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>React.js, Next.js, Svelte, Tailwind, Bootstrap</span></li>
-                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Node.js, REST API</span></li>
-                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Android Studio, TensorFlow Lite</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Svelte Kit, React.js, Next.js, PrimeReact, Laravel </span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Node.js, Svelte Kit, Laravel</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Android Studio, Kotlin, TensorFlow Lite</span></li>
                             <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>MySQL, PostgreSQL, Room Database</span></li>
-                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>VS Code, IntelliJ IDEA, Postman, Git</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Visual Studio Code, Antigravity, Postman, Git, XAMPP</span></li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="animate-cta">
-                    <a href="https://drive.google.com/file/d/1xDAWNUeYbb9GrYpwj52_hZuvyWuCm1-q/view?usp=sharing"
+                    <a href="https://drive.google.com/file/d/1xDAWNUeYbb9GrYpwj52_hZuvyWuCm1-q/view?usp=drive_link"
                         target="_blank"
                         class="inline-flex items-center text-primary font-bold hover:text-primary-deep transition-colors">
                         Download Resume <i class="fas fa-download ml-2"></i>

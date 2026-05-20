@@ -1,5 +1,6 @@
 <script lang="ts">
     import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
     import { projects, type Project } from '$lib/data/projects';
     import ProjectModal from './ProjectModal.svelte';
 
@@ -7,6 +8,8 @@
     let selectedProject: Project | null = $state(null);
 
     $effect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,

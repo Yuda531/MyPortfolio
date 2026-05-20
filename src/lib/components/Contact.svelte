@@ -1,5 +1,6 @@
 <script lang="ts">
     import gsap from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
     let section: HTMLElement;
     let formElement: HTMLFormElement;
@@ -22,6 +23,8 @@
     });
 
     $effect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
