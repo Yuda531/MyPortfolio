@@ -62,49 +62,48 @@
             <div class="md:w-2/3 md:pl-16">
                 <h3 class="animate-text text-2xl font-bold mb-4 text-ink-deep">My Story</h3>
                 <p class="animate-text mb-6 text-base text-ink leading-relaxed">
-                    As a dedicated Software Engineering student in my final
-                    undergraduate year, I combine cutting-edge technical expertise
-                    with hands-on professional experience gained through
-                    <strong class="text-ink-deep">14 months</strong> of impactful work with
-                    <strong class="text-ink-deep">tech startups</strong>. My specialization spans full-stack
-                    web development using modern frameworks
-                    <strong class="text-ink-deep">(Next.js, Node.js, PrimeReact, SvelteKit)</strong> and Android
-                    development with <strong class="text-ink-deep">Android Studio using Kotlin</strong>,
-                    complemented by robust skills in IT infrastructure management and
-                    technical support.
+                    Software Engineer with <strong class="text-ink-deep">1+ year of experience</strong> in
+                    full-stack web development, specializing in building scalable and
+                    responsive web applications. Graduated from
+                    <strong class="text-ink-deep">Universitas Teknologi Bandung</strong> with a
+                    <strong class="text-ink-deep">GPA of 3.91/4.00 (Cum Laude)</strong> in Software Engineering,
+                    and recognized as a <strong class="text-ink-deep">Distinction Graduate</strong> of
+                    Google's Bangkit Academy in Mobile Development.
                 </p>
                 <p class="animate-text mb-6 text-base text-ink leading-relaxed">
-                    I architect enterprise-grade web solutions for corporate clients,
-                    from
-                    <strong class="text-ink-deep">REST API-driven platforms to WordPress ecosystems</strong>, 
-                    while maintaining a parallel focus on developing performant
-                    mobile applications. My engineering approach merges academic rigor
-                    with real-world pragmatism, having polished my skills through
-                    Google's selective <strong class="text-ink-deep">Bangkit Academy program with Distinction Graduate</strong> 
-                    and sustained collaboration with agile startup teams.
+                    Skilled in <strong class="text-ink-deep">React.js, Next.js, SvelteKit, and Node.js</strong> for
+                    full-stack web development, and <strong class="text-ink-deep">Kotlin with Android Studio</strong> for
+                    mobile development. Experienced in building
+                    <strong class="text-ink-deep">RESTful API integrations</strong>,
+                    real-time systems with Socket.IO, and integrating machine
+                    learning-powered features like TensorFlow Lite into Android
+                    applications. Delivering end-to-end software solutions from
+                    design to deployment.
                 </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                     <div class="animate-card bg-canvas p-6 rounded-2xl border border-hairline-soft shadow-sm">
                         <h4 class="font-bold mb-4 text-lg text-ink-deep border-b border-hairline pb-2">Skills</h4>
                         <ul class="space-y-3 text-sm text-charcoal">
-                            <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-3"></span>Programming Languages</li>
-                            <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-3"></span>Frontend Development</li>
-                            <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-3"></span>Backend Development</li>
-                            <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-3"></span>Mobile Development</li>
-                            <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-3"></span>Database Management</li>
-                            <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-3"></span>Development Tools</li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Programming Languages</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Frontend Development</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Fullstack Framework</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Backend Development</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Mobile Development</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Database Management</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Development Tools</span></li>
                         </ul>
                     </div>
                     <div class="animate-card bg-canvas p-6 rounded-2xl border border-hairline-soft shadow-sm">
-                        <h4 class="font-bold mb-4 text-lg text-ink-deep border-b border-hairline pb-2">Tools</h4>
+                        <h4 class="font-bold mb-4 text-lg text-ink-deep border-b border-hairline pb-2">Tech Stack</h4>
                         <ul class="space-y-3 text-sm text-charcoal">
-                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Kotlin, JavaScript, TypeScript, Java, SQL</span></li>
-                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Svelte Kit, React.js, Next.js, PrimeReact, Laravel </span></li>
-                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Node.js, Svelte Kit, Laravel</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Kotlin, JavaScript, Java, PHP</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>React.js, Next.js, PrimeReact, Bootstrap</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>SvelteKit, Laravel</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Node.js</span></li>
                             <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Android Studio, Kotlin, TensorFlow Lite</span></li>
-                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>MySQL, PostgreSQL, Room Database</span></li>
-                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Visual Studio Code, Antigravity, Postman, Git, XAMPP</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>MySQL, PostgreSQL, Room Database, Data Store</span></li>
+                            <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-1.5 shrink-0"></span><span>Visual Studio Code, Postman, Git, XAMPP</span></li>
                         </ul>
                     </div>
                 </div>
