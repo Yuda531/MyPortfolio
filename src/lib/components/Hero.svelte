@@ -34,15 +34,6 @@
             "-=0.8"
         );
 
-        // Continuous floating animation on the image
-        gsap.to(imageContainer, {
-            y: -12,
-            duration: 2.5,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut",
-            delay: 1.5
-        });
     });
 </script>
 
@@ -70,11 +61,18 @@
                 </div>
             </div>
             <div class="md:w-1/2 flex justify-center">
-                <div 
+                <div
                     bind:this={imageContainer}
-                    class="w-80 h-80 md:w-96 md:h-96 bg-surface-soft rounded-full overflow-hidden border-8 border-hairline-soft shadow-lg relative">
-                    <div class="w-full h-full bg-hairline flex items-center justify-center">
-                        <img src="/img/agung.png" alt="Me" class="w-full h-full object-cover" />
+                    class="relative"
+                >
+                    <div class="absolute -inset-4 rounded-[40px] bg-gradient-to-br from-primary/10 via-transparent to-primary/5 blur-2xl"></div>
+
+                    <div class="relative w-full md:w-112 overflow-hidden rounded-[32px] border border-hairline-soft bg-surface-soft shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
+                        <img
+                            src="/img/agung.png"
+                            alt="Agung Yuda – Web Front End and Android Developer"
+                            class="w-full h-auto object-contain"
+                        />
                     </div>
                 </div>
             </div>
